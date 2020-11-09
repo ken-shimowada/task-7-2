@@ -4,11 +4,9 @@
 *** common
 *** valiable
 
-*** header
-*** 
-****** 
-****** 
-****** 
+*** visual
+*** news
+***
 *** footer
 
 */
@@ -40,76 +38,156 @@
 ==================================================*/
 /*==================================================
 
-*** header
+*** visual
 ==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
+.visual {
+  text-align: center;
+}
+
+.top-bg {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  background: #0185D0;
+}
+
+.visual-bg {
+  margin: 20px 30px;
+  padding: 110px 20px;
+  background: url(../img/img-4.jpg) no-repeat;
+}
+
+.visual__box {
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.visual__box > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0185D0;
+}
+
+.visual__box > p {
+  margin-top: 1rem;
+}
+
 /*==================================================
 
-
+*** news
 ==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
-/*==================================================
+.news {
+  padding: 0 20px 0;
+}
 
+.news h2 {
+  margin: 56px 0 36px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #0185D0;
+}
 
-==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
-/*==================================================
+.news__box {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .news__box {
+    /* < 600px */
+    display: block;
+  }
+}
 
+.news__box:not(:first-of-type) {
+  margin-top: 50px;
+}
 
-==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
-/*==================================================
+.news__box > img {
+  width: 39%;
+}
+@media (max-width: 600px) {
+  .news__box > img {
+    /* < 600px */
+    width: 100%;
+  }
+}
 
+.news__box__detail {
+  width: 55%;
+}
+@media (max-width: 600px) {
+  .news__box__detail {
+    /* < 600px */
+    margin-top: 20px;
+    width: 100%;
+  }
+}
 
-==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
-/*==================================================
+.news__box__detail > h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
 
+.news__box__detail > p {
+  margin-top: 10px;
+}
 
-==================================================*/
-/* ******  ****** */
-/* ******  ****** */
-/* ******  ****** */
+.news__box__detail > .btn {
+  margin-top: 35px;
+}
+
+.btn > a {
+  padding: 12px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+  background: #0185D0;
+}
+
+.btn > a:hover {
+  opacity: 0.8;
+}
+
 /*==================================================
 
 footer
 ==================================================*/
+footer {
+  margin-top: 66px;
+}
+
 .footer__sns {
   padding: 20px;
-  background: #EAAF47;
+  background: #0185D0;
 }
 
 .footer__sns > p {
   margin: 21px 0 10px;
   text-align: center;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #fff;
 }
 
 .footer__icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   padding: 10px 0 10px;
-  width: 180px;
 }
 
 .footer__sns__link {
+  margin: 0 7px;
   width: 35px;
 }
-
-.footer__sns__link > a {
-  padding: 0 5px;
+@media (max-width: 600px) {
+  .footer__sns__link {
+    /* < 600px */
+    margin: 0 4px;
+    width: 30px;
+  }
 }
 
 .footer__sns__link img {
@@ -117,19 +195,32 @@ footer
 }
 
 .footer__bottom {
-  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  padding: 34px 10px;
   text-align: center;
+  font-size: 1.4rem;
+}
+@media (max-width: 600px) {
+  .footer__bottom {
+    /* < 600px */
+    display: block;
+  }
 }
 
-.footer__bottom > small,
-.footer__bottom > p {
-  font-size: 14px;
+@media (max-width: 600px) {
+  .footer__bottom > li {
+    /* < 600px */
+    padding: 10px 0;
+  }
 }
 
-.footer__bottom > p {
-  margin-bottom: 16px;
+.footer__bottom > li:not(:last-of-type) {
+  margin-right: 12px;
 }
-
-.footer__bottom > a {
-  text-decoration: underline;
+@media (max-width: 600px) {
+  .footer__bottom > li:not(:last-of-type) {
+    /* < 600px */
+    margin-right: 0;
+  }
 }
