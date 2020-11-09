@@ -5,8 +5,8 @@
 *** valiable
 
 *** visual
+*** content
 *** news
-***
 *** footer
 
 */
@@ -33,13 +33,21 @@ $sp: 600px;
 
 /*==================================================
 
+*** valiable
+==================================================*/
+
+$key: #0185D0;
+
+
+
+/*==================================================
+
 *** common
 ==================================================*/
 
 .wrap{
     margin: 0 auto;
     width: 600px;
-    background: #F8F9FA;
     border-radius: 10px;
     border: 1px solid #DFDFDF;
 
@@ -48,11 +56,12 @@ $sp: 600px;
     }
 }
 
+
 .btn > a{
   padding: 12px;
   font-weight: bold;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 5px;
   background: $key;
 }
 
@@ -60,13 +69,10 @@ $sp: 600px;
   opacity: 0.8;
 }
 
-
-/*==================================================
-
-*** valiable
-==================================================*/
-
-$key: #0185D0;
+h2, h3{
+  font-size: 2.4rem;
+  font-weight: bold;
+}
 
 
 
@@ -90,7 +96,7 @@ $key: #0185D0;
 .visual-bg{
   margin: 20px 30px;
   padding: 110px 20px;
-  background: url(../img/img-4.jpg) no-repeat;
+  background: url(../img/img-4.jpg) no-repeat 100%/ cover;
 }
 
 .visual__box{
@@ -108,6 +114,88 @@ $key: #0185D0;
 .visual__box > p{
   margin-top: 1rem;
 }
+
+
+
+/*==================================================
+
+*** content
+==================================================*/
+
+.content{
+  margin: 39px 20px 0;
+}
+
+.content > h2{
+  text-align: center;
+  color: $key;
+}
+
+.content__event{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  @include sp{ /* < 600px */
+    display: block;
+  }
+}
+
+.content__event__item{
+  width: 31%;
+
+  @include sp{ /* < 600px */
+    width: 100%;
+  }
+}
+
+.content__event__item:not(:first-of-type){
+  @include sp{ /* < 600px */
+    margin-top: 60px;
+  }
+}
+
+.content__event__img{
+  width: 100%;
+}
+
+.content__event__img > img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.content__event__item > time{
+  display: block;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.content__event__item > h3{
+  font-size: 1.78rem;
+  text-transform: uppercase;
+}
+
+.content__event__item > .btn{
+  margin-top: 30px;
+}
+
+
+.reminder{
+  margin-top: 60px;
+  padding: 30px;
+  border-radius: 10px;
+  background: $key;
+  color: #fff;
+}
+
+.reminder > h2{
+}
+
+.reminder > p{
+  margin: 16px 0;
+}
+
 
 
 
@@ -212,9 +300,9 @@ footer{
   }
 }
 
-// .footer__sns__link > a{
+.footer__sns__link > a{
 
-// }
+}
 
 .footer__sns__link img{
   width: 100%;
@@ -223,6 +311,7 @@ footer{
 .footer__bottom{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 34px 10px;
   text-align: center;
   font-size: 1.4rem;
@@ -239,7 +328,7 @@ footer{
 }
 
 .footer__bottom > li:not(:last-of-type){
-  margin-right: 12px;
+  margin-right: 10px;
 
   @include sp{ /* < 600px */
       margin-right: 0;
