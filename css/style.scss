@@ -1,0 +1,137 @@
+/* 
+
+*** media queries
+*** common
+*** valiable
+
+*** visual
+*** content
+***
+*** footer
+
+*/
+
+
+
+/*==================================================
+
+*** media queries
+==================================================*/
+
+$sp: 600px;
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+// @include sp{ /* < 600px */
+// }
+
+
+
+/*==================================================
+
+*** common
+==================================================*/
+
+.wrap{
+    margin: 0 auto;
+    width: 600px;
+    background: #F8F9FA;
+    border-radius: 10px;
+    border: 1px solid #DFDFDF;
+
+    @include sp{ /* < 600px */
+        width: 100%;
+    }
+}
+
+
+/*==================================================
+
+*** valiable
+==================================================*/
+
+$key: #EAAF47;
+
+
+
+/*==================================================
+
+*** visual
+==================================================*/
+/* ******  ****** */
+/* ******  ****** */
+/* ******  ****** */
+
+
+
+/*==================================================
+
+*** content
+==================================================*/
+/* ******  ****** */
+/* ******  ****** */
+/* ******  ****** */
+
+
+
+/*==================================================
+
+footer
+==================================================*/
+// .footer{
+// }
+
+.footer__sns{
+    padding: 20px;
+    background: $key;
+  }
+  
+.footer__sns > p{
+    margin: 21px 0 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+  
+  .footer__icons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0 10px;
+    width: 180px;
+}
+  
+.footer__sns__link{
+    width: 35px;
+}
+  
+.footer__sns__link > a{
+    padding: 0 5px;
+}
+  
+.footer__sns__link img{
+    width: 100%;
+}
+  
+.footer__bottom{
+    padding: 20px 10px;
+    text-align: center;
+}
+  
+.footer__bottom > small,
+.footer__bottom > p
+{
+    font-size: 14px;
+}
+  
+.footer__bottom > p{
+    margin-bottom: 16px;
+}
+  
+.footer__bottom > a{
+    text-decoration: underline;
+}
